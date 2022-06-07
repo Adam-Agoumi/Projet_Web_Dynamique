@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Enregistrement de livres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="livres.css">
+</head>
+<body>
+    <p>Veuillez remplir ce formulaire pour enregistrer un nouveau livre.</p>
+    <form action="books.php" method="post">
+        <div class="container-fluid">
+            <label for="titre"><b>Titre</b></label>
+            <input type="text" placeholder="Les Feux de l'Amour" name="titre" id="titre" required>
+
+            <label for="auteur"><b>Auteur</b></label>
+            <input type="text" placeholder="Ernest Hemingway" name="auteur" id="auteur" required>
+
+            <label for="annee"><b>Année</b></label>
+            <br />
+            <input type="date" name="annee" id="annee" required>
+            <br />
+            <br />
+
+            <label for="editeur"><b>Editeur</b></label>
+            <input type="text" placeholder="Flammarion" name="editeur" id="editeur" required>
+        </div>
+        <hr />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="column">
+                    <button type="submit" class="addbtn">Ajouter</button>
+                </div>
+                <div class="column">
+                    <button type="submit" class="searchbtn">Rechercher</button>
+                </div>
+            </div>
+        </div>
+</form>
+</body>
+</html>

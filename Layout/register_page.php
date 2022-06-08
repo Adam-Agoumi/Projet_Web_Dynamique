@@ -18,7 +18,7 @@
 
     //recuperer les donnees du form
     $email = isset($_POST["email"])?$_POST["email"]:"";
-    $psw = isset($_POST["psw"])?$_POST[psw]:"";
+    $psw = isset($_POST["psw"])?$_POST["psw"]:"";
 
     $sql = "INSERT INTO User(Username, FirstName, LastName, Birthdate, Email, Password, Approved)
             VALUES('Coco', 'Colin', 'Joubert', '2001-01-01', '$email', '$psw', '0')";

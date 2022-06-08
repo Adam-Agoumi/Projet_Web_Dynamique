@@ -16,10 +16,10 @@ Vue.component('register', {
             <input type="password" placeholder="MotDePasse" name="psw-repeat" id="psw-repeat" required>
             <hr>
 
-            <p>En crÈant ce compte, vous adhÈrez ‡ nos <a href="#">Conditions d'Utilisation</a></p>
+            <p>En cr√©ant ce compte, vous adh√©rez √† nos <a href="#">Conditions d'Utilisation</a></p>
             <button type="submit" class="registerbtn">Creation</button>
             <br>
-            <p>Vous avez dÈj‡ un compte chez nous? <a href="login.html">Login</a>.</p>
+            <p>Vous avez d√©j√† un compte chez nous? <a href="login.html">Login</a>.</p>
         </div>
     `
 })

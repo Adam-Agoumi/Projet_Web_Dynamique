@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="register.css">
 </head>
 <body>
-   
+
     <div id="register-form">
         <form action="Layout/register_page.php" method="post">
             <register></register>

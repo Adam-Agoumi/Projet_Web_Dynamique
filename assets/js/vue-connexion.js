@@ -3,7 +3,7 @@ Vue.component('register', {
     
         <div class="container">
             <h1>Creation de compte</h1>
-            <p>Veuillez remplir ce formulaire pour créer un compte.</p>
+            <p>Veuillez remplir ce formulaire pour creer un compte.</p>
             <hr>
 
             <label for="email"><b>E-mail</b></label>

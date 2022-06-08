@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="register.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
 </head>
 <body>
-<form action="login_page.php">
+<form action="../Layout/login_page.php">
     <div class="container">
         <h1>Connexion</h1>
         <p>Veuillez remplir ce formulaire pour vous connecter.</p>
@@ -23,7 +23,7 @@
     </div>
     <br>
     <div class="signin">
-        <p>Vous n'avez pas de compte chez nous? <a href="register.html">Création de compte.</a>.</p>
+        <p>Vous n'avez pas de compte chez nous? <a href="../Layout/register.php">Création de compte.</a>.</p>
     </div>
 </form>
 </body>

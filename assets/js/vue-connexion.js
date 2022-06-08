@@ -19,7 +19,7 @@ Vue.component('register', {
             <p>En créant ce compte, vous adhérez à nos <a href="#">Conditions d'Utilisation</a></p>
             <button type="submit" class="registerbtn">Creation</button>
             <br>
-            <p>Vous avez déjà un compte chez nous? <a href="login.html">Login</a>.</p>
+            <p>Vous avez déjà un compte chez nous? <a href="../../Layout/login.php">Login</a>.</p>
         </div>
     `
 })

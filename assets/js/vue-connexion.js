@@ -42,7 +42,7 @@ Vue.component('login', {
             <input type="password" placeholder="MotDePasse" name="psw" id="psw" required>
             <hr>
 
-            <button type="submit" class="registerbtn">Connexion</button>
+            <button name="LoginButton" type="submit" class="registerbtn">Connexion</button>
             <br>
             <p>Vous n'avez pas de compte chez nous? <a href="../../Layout/register.php">Création de compte.</a>.</p>
         </div>

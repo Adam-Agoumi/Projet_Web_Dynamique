@@ -1,3 +1,4 @@
+
 Vue.component('register', {
     template: `
     

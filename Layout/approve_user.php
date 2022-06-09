@@ -1,4 +1,9 @@
 <?php
+session_start();
+if($_SESSION['isWebPageAllowed']==false){
+    header('Location:page_d_acceuil.php');
+}
+require ("navbar.php");
 
     $userID = isset($_POST["userID"]) ? $_POST["userID"] : "";
     $connection = null;

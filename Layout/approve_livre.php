@@ -1,4 +1,10 @@
 <?php
+session_start();
+if($_SESSION['isWebPageAllowed']==false){
+    header('Location:page_d_acceuil.php');
+}
+require ("navbar.php");
+
 
     $bookTitle = isset($_POST["bookTitle"]) ? $_POST["bookTitle"] : "";
     $connection = null;

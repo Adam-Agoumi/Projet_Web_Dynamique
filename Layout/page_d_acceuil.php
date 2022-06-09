@@ -21,6 +21,9 @@
             <a class="nav-link nav-link-custom text-light" href="../Layout/index.php">Connexion</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link nav-link-custom text-light" href="../Layout/Deconnexion.php">Deconnexion</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link nav-link-custom text-light" href="../Layout/page_d_acceuil.php">Acceuil</a>
         </li>
         <li class="nav-item">
@@ -46,7 +49,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link nav-link-custom text-light" >
-                <?php session_start(); echo $_SESSION['FirstName_connected']."  ".  $_SESSION['LastName_connected']; ?></a>
+                <?php  session_start(); if(session_status()==PHP_SESSION_ACTIVE) {echo $_SESSION['FirstName_connected']."  ".  $_SESSION['LastName_connected'];} ?></a>
         </li>
     </ul>
 

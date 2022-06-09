@@ -23,8 +23,9 @@ if(isset($_POST["LoginButton"])){
             while ($result->rowCount() > 0){
 
                     while ($rows = $result->fetch()){
-                        $isAllowed = true;
                         session_start();
+
+
                         $userID = $rows['User_id'];
                         $Username = $rows['Username'];
                         $FirstName = $rows['FirstName'];
@@ -47,12 +48,15 @@ if(isset($_POST["LoginButton"])){
                         {
                             $Roleid = $row['RoleID'];
                         }
-
+                        if ($Roleid==1 or $Roleid==2){
+                            $isAllowed = true;
+                        }
                         $_SESSION['UserID_connected'] = $userID;
                         $_SESSION['Username_connected'] = $Username;
                         $_SESSION['FirstName_connected'] = $FirstName;
                         $_SESSION['LastName_connected'] = $LastName;
                         $_SESSION['RoleID_connected'] = $Roleid;
+                        $_SESSION['isWebPageAllowed'] = $isAllowed;
 
                         header('Location:page_d_acceuil.php');
                         exit();
@@ -61,19 +65,19 @@ if(isset($_POST["LoginButton"])){
 
             }
             if (!$isAllowed){
-                $error = "le mot de passe est incorrect";
-                echo "<div style='color: #DA291C; background-color: lightgray; border: 3px solid firebrick;'> Le mot de passe est incorrect  </div><br><br>";
-                session_destroy();
+                $error = "le mot de passe ou le nom d'utilisateur est incorrect";
+                echo "<div style='color: #DA291C; background-color: lightgray; border: 3px solid firebrick;'>le mot de passe ou le nom d'utilisateur est incorrect </div><br><br>";
+                //session_destroy();
             }
         } else {
             $error = "l'utilisateur n'est pas dans la base de donnée";
             echo "<div style='color: #DA291C; background-color: lightgray; border: 3px solid firebrick;'> l'utilisateur n'est pas dans la base de donnée  </div><br><br>";
-            session_destroy();
+           // session_destroy();
         }
     }else{
         $error = "il manque des informations";
         echo "<div style='color: #DA291C; background-color: lightgray; border: 3px solid firebrick;'> il manque des informations  </div><br><br>";
-        session_destroy();
+        //session_destroy();
 
     }
 }

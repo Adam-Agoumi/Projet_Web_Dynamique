@@ -36,6 +36,28 @@ Vue.component('creation', {
     `
 })
 
-var Creation = new Vue({
+var creation = new Vue({
     el: "#creation-form"
+})
+Vue.component('supprimer', {
+    template: `
+    
+        <div class="container">
+            <h1>Supprimer d'un livre</h1>
+            <p>Veuillez remplir ce formulaire pour supprimer un livre.</p>
+            <hr>
+            
+            <label for="Titre"><b>Titre</b></label>
+            <input type="text" placeholder="Titre du livre à supprimer" name="Titre" id="Titre" required>
+           
+            <p>En cliquant sur supprimer, vous retirez le livre de la base de données</p>
+            <button type="submit" class="Deletebtn">Supprimer</button>
+            <br>
+            <p>Vous cherchez un livre? <a href="../../Layout/searchForm.php">Cherhcer</a>.</p>
+        </div>
+    `
+})
+
+var supprimer = new Vue({
+    el: "#supprimer-form"
 })

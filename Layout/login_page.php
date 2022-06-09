@@ -20,21 +20,27 @@ if(isset($_POST["LoginButton"])){
                 exit();
             }
 
-            if ($result->rowCount() > 0){
-                foreach ($result as $row){
-                    $isAllowed = true;
-                    session_start();
-                    $SESSION["username"]=["pseudo"];
-                    $SESSION["Approved"]=$row["Approved"];
-                    $SESSION["LastName"]=["nom"];
-                    $SESSION["FirstName"]=["prénom"];
+            while ($result->rowCount() > 0){
 
-                    $password = null;
-                    $username = null;
-                    echo "connexion reussi";
-                    header("location:../Layout/creation.php");
-                    exit();
-                }
+                    while ($rows = $result->fetch()){
+                        $isAllowed = true;
+                        session_start();
+                        $userID = $rows['User_id'];
+                        $Username = $rows['Username'];
+                        $FirstName = $rows['FirstName'];
+                        $LastName = $rows['LastName'];
+                        $BirthDate   = $rows['Birthdate'];
+                        $Email = $rows['Email'];
+                        $password = $rows['password'];
+                        $Approved = $rows['Approved'];
+
+                        $password = null;
+                        $username = null;
+                        echo "connexion reussi",$Username, $FirstName, $LastName;
+                        exit();
+                    }
+
+
             }
             if (!$isAllowed){
                 $error = "le mot de passe est incorrect";

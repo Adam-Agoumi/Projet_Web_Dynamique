@@ -12,13 +12,16 @@
 
     <body>
         <?php
-            $connection = null;
+        require ("navbar.php");
+
+        $connection = null;
                 require '../script/bdd_livres_connect.php';
                 $sql = "SELECT * FROM Book WHERE approbation=1";
                 $result = $connection->query($sql);
                 if($result->rowCount() == 0){
                     echo "Il n'y a pas de livres dans la base";
                 }else{
+                    echo"<br><br><br><br>";
                     echo "<h1>Livres dans la base de données:</h1>\n";
 
                     echo "\n<table>\n<tr>\n" .

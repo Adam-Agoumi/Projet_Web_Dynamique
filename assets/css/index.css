@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-image: url('../assets/img/background.png');
     background-size: cover;
@@ -5,47 +6,60 @@ body {
 
 .info-container {
     margin-top: 150px;
+=======
+.info-container{
+    margin-top:50px;
+>>>>>>> parent of af2244c (Update index css)
     margin-right: 20%;
     margin-left: 20%;
 }
 
-.title-container {
+.title-container{
     width: auto;
-    display: flex;
+    display:flex;
     justify-content: center;
     color: #007179;
     margin-bottom: 50px;
 }
 
-.cover-image {
+.button{
+    background-color: #F7941D;
+    color: white;
     display: flex;
     justify-content: center;
-    padding-bottom: 250px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    position:absolute;
+    left:50px;
+    top: 55px;
 }
 
-.cover-image img {
-    width: 65%;
-    text-align: center;
+.button:hover{
+    background-color: white;
+    border:#F7941D solid 1px;
+    color: #F7941D;
+    cursor: pointer;
+    border-width: 3px;
+    transition-property: all;
+    transition-duration: 0.2s;
 }
 
-.book-info {
-    display: flex;
+.book-info{
+    display:flex;
 }
 
-.book-text-info {
+.book-text-info{
     margin-left: 40px;
 }
 
-.book-text-info strong {
+.book-text-info strong{
     font-size: 20px;
     font-weight: bold;
 }
 
-.book-info img {
-    border-radius: 10px;
-    border: solid 3px #007179;
-}
+.book-info img{
 
-footer {
-    text-align: center;
+    border-radius: 10px;
+    border : solid 3px #007179;
 }

@@ -1,4 +1,5 @@
 <?php
+    require ("navbar.php");
    $id = $_GET['id'];
    $bdd = new PDO("mysql:dbname=******;host=******;charset=utf8")
    $bdd->prepare("DELETE FROM enregistrement WHERE id = ?")->execute( array($id) );

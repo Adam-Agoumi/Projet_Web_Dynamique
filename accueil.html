@@ -3,54 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Page d'accueil</title>
+    <!-- Lien vers la favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+
+    <!-- Google font Poppins-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
-    <link rel="stylesheet" href="accueil.css" />
+<link rel="stylesheet" href="accueil.css" />
 
 <body>
 
-<header>
 
-    <h1>À propos de nous</h1>
-</header>
-<div class="navbar">
-    <a class="active" href="Acceuil.html"> Acceuil</a>
-    <a href="#"> Connexion</a>
-    <a href="Layout/register.php"> Inscription</a>
-    <a href="#">Visiteur</a>
-</div>
+<nav id="menu">
+    <p><a href="?"><i class="fas fa-bars"></i>Menu
+    </a></p>
+    <ul class="sousMenu">
+        <li><a href="Acceuil.html">Acceuil</a></li>
+        <li><a href="#">Connexion</a></li>
+        <li><a href="Layout/register.php">Inscription</a></li>
+        <li><a href="#">Visiteur</a></li>
+    </ul>
+</nav>
+
+<!------- BANNER -------->
+<section id="banner">
+    <p><span>Toutes les oeuvres et livres vendus sur cette plateforme sont
+        </span>certifiés authentiques </p>
+    <h1>A propos de nous &nbsp;</h1>
+</section>
 
 <main>
-    <section>
 
+
+
+
+    <nav>
         <img src="images/bulle.png" alt="" id="fleche_bulle"/>
-        <p>Toutes les oeuvres et livres vendus sur cette plateforme sont certifiés authentiques.</p>
+
         <p>Suivez-nous sur les résaux: </p>
         <p><a href="https://www.facebook.com/search/top/?q=antiquite" target="_blank"><img src="images/facebook.png"
                                                                                            alt="Facebook"/></a><a
                 href="https://twitter.com/" target="_blank"><img src="images/twitter.png" alt="Twitter"/></a><a
                 href="https://www.instagram.com/p/CW-lAT3JoWC/" target="_blank"><img src="images/insta.jpg"/></a>
         </p>
-    </section>
-
-    <aside>
-
-    </aside>
+    </nav>
 
 </main>
 <footer>
-    <p>Copyright &copy; 2021. Tous droits réservés.</p>
+    <p>Copyright &copy; 2022. Tous droits réservés.</p>
     <ul>
-        <li><a href="#">nous contacter |</a></li>
-        <li><a href="#">aide |</a></li>
-        <li><a href="#">confidentialité |</a></li>
-        <li><a href="#">remboursement |</a></li>
+        <li><a href="#">nous contacter</a></li>
+        <li><a href="#">aide</a></li>
+        <li><a href="#">confidentialité</a></li>
+        <li><a href="#">remboursement</a></li>
     </ul>
     <div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d656.1872108984695!2d2.3348862292481876!3d48.8629994987055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e25be9e2f85%3A0xdba4472364858409!2s2%20Rue%20de%20Rohan%2C%2075001%20Paris!5e0!3m2!1sfr!2sfr!4v1639330317299!5m2!1sfr!2sfr"
-                width="400" height="300" style="border:0;" ></iframe>
+                width="225" height="125" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
     </div>
 </footer>
+<!-- Lien vers font awesome-->
+<script src="https://kit.fontawesome.com/0d94910043.js" crossorigin="anonymous"></script>
 
 </body>
 

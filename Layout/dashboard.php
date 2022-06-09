@@ -1,4 +1,5 @@
 <?php
+    require ("navbar.php");
     $connection = null;
     require '../script/bdd_livres_connect.php';
 

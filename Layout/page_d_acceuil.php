@@ -21,7 +21,7 @@
             <a class="nav-link nav-link-custom text-light" href="../Layout/index.php">Connection</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-custom text-light" href="#">Visiteur</a>
+            <a class="nav-link nav-link-custom text-light" href="../Layout/dashboard.php">Voir livres</a>
         </li>
         <li class="nav-item">
             <a class="nav-link nav-link-custom text-light" href="../Layout/page_d_acceuil.php">Acceuil</a>
@@ -34,21 +34,15 @@
     <div class="title-container">
         <h1>Bienvenue dans notre bibliothèque numérique</h1>
     </div>
-    <div class="book-info">
-        <div class="cover-image">
-            <img src="../assets/img/cover.jpeg">
-        </div>
-        <div class="book-text-info">
-            <p><strong> Voici un exemple d'informations sur un livre que vous pourrez retrouver dans notre bibliothèque</strong></p>
-            <p><strong>Titre : </strong>Atomic Habits</p>
-            <p><strong>Auteur : </strong>James Clear</p>
-            <p><strong>Editeur : </strong>Avery</p>
-            <p><strong>Année de parution : </strong>2018</p>
-            <p><strong>ISBN : </strong>B01N5AX61W</p>
-            <p><strong>Nombres de pages : </strong>319</p>
-            <p><strong>Description : </strong> Quels que soient vos objectifs, Atomic Habits vous propose un cadre éprouvé pour vous améliorer - chaque jour. James Clear, l'un des plus grands spécialistes mondiaux de la formation des habitudes, révèle des stratégies pratiques qui vous apprendront exactement comment former de bonnes habitudes, briser les mauvaises et maîtriser les petits comportements qui conduisent à des résultats remarquables.</p>
-        </div>
+    <div class="cover-image">
+        <img src="../assets/img/cover.jpg" style="padding: 10px 100px 100px 100px">
     </div>
 </div>
+
+<footer>
+    <p style="padding:0px 190px "> <strong> Créé par Adam AGOUMI, Evan FLAMENT, Boubker HENNOUCHE, JEAN Guillaume, JOUBERT Colin et ROGEZ Mathieu. Copyright &copy; 2022.  </strong> </p>
+</footer>
+
+
 </body>
 </html>

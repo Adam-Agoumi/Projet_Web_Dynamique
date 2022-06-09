@@ -21,7 +21,7 @@
             <a class="nav-link nav-link-custom text-light" href="../Layout/index.php">Connection</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-custom text-light" href="#">Visiteur</a>
+            <a class="nav-link nav-link-custom text-light" href="#">Voir livres</a>
         </li>
         <li class="nav-item">
             <a class="nav-link nav-link-custom text-light" href="../Layout/page_d_acceuil.php">Acceuil</a>

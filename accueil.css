@@ -1,0 +1,74 @@
+/*
+Photo de fond en css
+    - on utilise "background-image" -> permet de définir une image en fond
+    - on utilise "background-repeat" -> permet de définir la façon dont l'image va se répéter
+    - on utilise "background-position" -> permet de donner la position de l'image de fond par rapport au coin haut gauche
+*/
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section {
+    background-image: url("images/biblio.jpg");
+    height: 1000px;
+    background-attachment: fixed;
+    filter : blur(10px);
+    filter: sepia(50%);
+}
+
+
+
+.container{
+    background-color: rgba(255,255,255,0.3);
+    width: 50rem;
+    height: 200px;
+    padding: 2rem;
+}
+
+.container p{
+    text-align: center;
+    color: white;
+    font-size: 4rem;
+}
+
+/*
+ou autre façon de faire
+*/
+/*balise de ta photo*/
+{
+    background: url(images/biblio.jpg) no-repeat center center;
+    height: 400px;
+    background-attachment: fixed;
+    filter : blur(10px);
+    filter: sepia(50%);
+}
+.photoFond{
+    background: url(images/biblio.jpg) no-repeat center center;
+    height: 400px;
+    background-attachment: fixed;
+}
+
+/* SECTION One */
+
+article{
+    width: 45rem;
+    margin: 2rem;
+    background-color: #000;
+}
+
+#one article img{
+    width: 100%;
+}
+
+#one{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 8rem;
+}

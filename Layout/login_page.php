@@ -1,19 +1,16 @@
 <?php
 
-$email = isset($_POST["email"]) ? : "";
-$password = isset($_POST["psw"]) ?  : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+$password = isset($_POST["psw"]) ? $_POST["psw"] : "";
 $isAllowed = false;
 $connection=null;
 //require './deconnexion.php';
+require '../script/bdd_users_connect.php';
 
 if(isset($_POST["LoginButton"])){
-
     if(session_status() == PHP_SESSION_NONE){
-
-
-
         if(!empty($email)&& !empty($password)){
-            require '../script/bdd_users_connect.php';
+
             $sql = "SELECT * FROM user 
                     INNER JOIN userrole 
                     ON User_id = userrole.UserID 

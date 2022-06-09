@@ -5,70 +5,63 @@ Photo de fond en css
     - on utilise "background-position" -> permet de donner la position de l'image de fond par rapport au coin haut gauche
 */
 
-body {
+h1{
+    position: revert;
+    color: #008;
+}
+
+header{
+    height: 100px;
+    background-color: #F7941D;
+}
+
+div.navbar{
+    height: 25px;
+    background-color: #009;
+}
+
+main{
+    height: 00px;
+    background-color:rgb(34, 56, 40) ;
+}
+
+footer{
+    background: #E5801C;
+    width: 1409px;
+    position: absolute;
+    bottom:0;
+
+    padding: 2rem 0 1rem 0;
+    height:110px;
+}
+footer.div{
+    position: absolute;
+    right: 0;
+}
+
+
+main.section {
+    font-size: 200px;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+
+section {
+    width: 1345px;
+    height : 500px;
+    padding-left: 50px;
+    background-image: url(images/biblio.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center center;
-    height: 100vh;
+    background-size: cover;
+    color: #FFF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-section {
-    background-image: url("images/biblio.jpg");
-    height: 1000px;
-    background-attachment: fixed;
-    filter : blur(10px);
-    filter: sepia(50%);
-}
-
-
-
-.container{
-    background-color: rgba(255,255,255,0.3);
-    width: 50rem;
-    height: 200px;
+    text-align: center;
     padding: 2rem;
 }
 
-.container p{
-    text-align: center;
-    color: white;
-    font-size: 4rem;
-}
 
-/*
-ou autre façon de faire
-*/
-/*balise de ta photo*/
-{
-    background: url(images/biblio.jpg) no-repeat center center;
-    height: 400px;
-    background-attachment: fixed;
-    filter : blur(10px);
-    filter: sepia(50%);
-}
-.photoFond{
-    background: url(images/biblio.jpg) no-repeat center center;
-    height: 400px;
-    background-attachment: fixed;
-}
 
-/* SECTION One */
-
-article{
-    width: 45rem;
-    margin: 2rem;
-    background-color: #000;
-}
-
-#one article img{
-    width: 100%;
-}
-
-#one{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 8rem;
-}

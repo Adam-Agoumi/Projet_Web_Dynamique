@@ -36,7 +36,9 @@
                     $sql .= " AND Autor LIKE '%$auteur%'";
                 }
             }
-            $result = mysqli_query($datasource, $sql) or die('Erreur SQL <br>' . $sql . '<br>' . mysqli_error($datasource));
+            $result = $connection->query( $sql)// or die('Erreur SQL <br>' . $sql . '<br>' . mysqli_error($datasource))
+
+            ;
             if(mysqli_num_rows($result) == 0){
                 echo "Il n'y a pas de livres dans cette recherche";
             }else{

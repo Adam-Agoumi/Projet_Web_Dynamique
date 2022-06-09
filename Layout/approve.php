@@ -12,6 +12,7 @@
     </head>
     <body>
         <?php
+            require ("navbar.php");
             $connection = null;
             require '../script/bdd_livres_connect.php';
             $sql = "SELECT * FROM Book WHERE approbation = 0";

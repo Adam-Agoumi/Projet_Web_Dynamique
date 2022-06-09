@@ -48,7 +48,7 @@
             <a class="nav-link nav-link-custom text-light" href="../Layout/approve.php">Approuver un livre</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-custom text-light" href="#">Approuver un utilisateur</a>
+            <a class="nav-link nav-link-custom text-light" href="../Layout/approve_bis.php">Approuver un utilisateur</a>
         </li>
 
         <li class="nav-item">

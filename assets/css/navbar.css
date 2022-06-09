@@ -1,7 +1,10 @@
 .navbar-custom {
+    margin-top: 10px;
     height: 50px;
+    width: 100%;
     background-color: #007179 !important;
 }
+
 
 .nav-link-custom:hover{
     color: #F7941D !important;

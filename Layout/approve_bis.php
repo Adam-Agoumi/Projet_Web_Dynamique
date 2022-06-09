@@ -12,7 +12,8 @@
     </head>
     <body>
         <?php
-            $connection = null;
+        require ("navbar.php");
+        $connection = null;
             require '../script/bdd_users_connect.php';
             $sql = "SELECT User_id, Username, FirstName, LastName, Birthdate, Email FROM user WHERE approbation = 0";
             $result = $connection->query($sql);

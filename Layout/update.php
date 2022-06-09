@@ -1,47 +1,63 @@
-<?php
-    require ("navbar.php");
-   $id = $_GET['id'];
-   $bdd = new PDO("mysql:dbname=******;host=******;charset=utf8")
-   $bdd->prepare("DELETE FROM enregistrement WHERE id = ?")->execute( array($id) );
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Update</title>
+        <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-   $redirect_url = "/";
-   header("Location: {$redirect_url}");
-   exit;
+    </head>
 
+    <body>
+        <?php
+            $connection = null;
+                require '../script/bdd_livres_connect.php';
+                $sql = "SELECT * FROM Book WHERE approbation=1";
+                $result = $connection->query($sql);
+                if($result->rowCount() == 0){
+                    echo "Il n'y a pas de livres dans la base";
+                }else{
+                    echo "<h1>Livres dans la base de données:</h1>\n";
 
-  // Vérifie qu'il provient d'un formulaire
-  if ($_SERVER["REQUEST_METHOD"] != "POST") {
-      return;
-  }//identifiants mysql
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "users";
+                    echo "\n<table>\n<tr>\n" .
+                            "\n\t<th>Titre</th>" .
+                            "\n\t<th>Date de publication</th>" .
+                            "\n\t<th>Editeur</th>" .
+                            "\n\t<th>Collection</th>" .
+                            "\n\t<th>Edition</th>" .
+                            "\n\t<th>Approbation</th>";
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    if (!isset($name)){
-      die("S'il vous plaît entrez votre nom");
-    }
-    if (!isset($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)){
-      die("S'il vous plaît entrez votre adresse e-mail");
-    }
-    //Ouvrir une nouvelle connexion au serveur MySQL
-    $mysqli = new mysqli($host, $username, $password, $database);
+                    while($row = $result->fetch(PDO::FETCH_ASSOC)){ //jusqu'à plus de row dans le result
+                        echo "\n<tr>"; //on commence un row du tableau
 
-    //Afficher toute erreur de connexion
-    if ($mysqli->connect_error) {
-      die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
-    }
+                        //on sort chacun des attributs comme table data
+                        foreach ($row as $dataTitle) {
+                            echo "\n\t<td> $dataTitle</td>";
+                        }
 
-    //préparer la requête d'insertion SQL
-    $statement = $mysqli->prepare("INSERT INTO users (name, email) VALUES(?, ?)");
-    //Associer les valeurs et exécuter la requête d'insertion
-    $statement->bind_param('ss', $name, $email);
+                        //on finit le row
+                        echo "\n</tr>";
+                    }
+                    //finir le tableau
+                    echo "\n</table>\n";
+                }
+        ?>
 
-    if($statement->execute()){
-      print "Salut " . $name . "!, votre adresse e-mail est ". $email;
-    }else{
-      print $mysqli->error;
-    }
-?>
+        <div id="bookTitleForm">
+            <form action="../Layout/approve_livre.php" method="post">
+            <div class="container">
+                <p>Veuillez saisir le titre du livre que vous voulez valider</p>
+                <hr>
+
+                <label for="bookTitle"><b>Titre du livre</b></label>
+                <input type="text" placeholder="titre" name="bookTitle" id="bookTitle" required>
+                <button type="submit" class="registerbtn" name="valider">Valider</button>
+                <hr>
+            </div>
+            </form>
+        </div>
+        <a href="../Layout/approve_bis.php">Cliquez ici pour approuver les utilisateurs.</a>
+    </body>
+</html>

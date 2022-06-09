@@ -48,6 +48,12 @@
             <a class="nav-link nav-link-custom text-light" href="#">Approuver un utilisateur</a>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link nav-link-custom text-light" >
+                <?php session_start(); echo $_SESSION['FirstName_connected']."  ".  $_SESSION['LastName_connected']; ?></a>
+        </li>
+
+
     </ul>
 
 </nav>

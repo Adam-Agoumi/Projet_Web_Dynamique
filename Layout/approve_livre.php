@@ -1,4 +1,7 @@
 <?php
+require ("navbar.php");
+?>
+<?php
 
     $bookTitle = isset($_POST["bookTitle"]) ? $_POST["bookTitle"] : "";
     $connection = null;

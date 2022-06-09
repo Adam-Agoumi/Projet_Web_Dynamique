@@ -29,7 +29,7 @@ if(isset($_POST["LoginButton"])){
                         $Username = $rows['Username'];
                         $FirstName = $rows['FirstName'];
                         $LastName = $rows['LastName'];
-                        $BirthDate   = $rows['Birthdate'];
+                        $BirthDate   = $rows['BirthDate'];
                         $Email = $rows['Email'];
                         $password = $rows['password'];
                         $Approved = $rows['Approved'];
@@ -37,6 +37,24 @@ if(isset($_POST["LoginButton"])){
                         $password = null;
                         $username = null;
                         echo "connexion reussi",$Username, $FirstName, $LastName;
+
+                        $sql = "SELECT RoleID   
+                                FROM userrole 
+                                WHERE( userrole.UserID = '" . $userID . "')";
+                        $result = $connection->query($sql);
+
+                        while ($row = $result->fetch(PDO::FETCH_ASSOC))
+                        {
+                            $Roleid = $row['RoleID'];
+                        }
+
+                        $_SESSION['UserID_connected'] = $userID;
+                        $_SESSION['Username_connected'] = $Username;
+                        $_SESSION['FirstName_connected'] = $FirstName;
+                        $_SESSION['LastName_connected'] = $LastName;
+                        $_SESSION['RoleID_connected'] = $Roleid;
+
+                        header('Location:page_d_acceuil.php');
                         exit();
                     }
 

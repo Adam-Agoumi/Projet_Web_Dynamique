@@ -24,7 +24,7 @@
             <a class="nav-link nav-link-custom text-light" href="#">Visiteur</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-custom text-light" href="../Layout/page_d_acceuil.php">Acceuil_test</a>
+            <a class="nav-link nav-link-custom text-light" href="../Layout/page_d_acceuil.php">Acceuil</a>
         </li>
     </ul>
 

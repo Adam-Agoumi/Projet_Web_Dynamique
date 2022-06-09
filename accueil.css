@@ -5,55 +5,95 @@ Photo de fond en css
     - on utilise "background-position" -> permet de donner la position de l'image de fond par rapport au coin haut gauche
 */
 
-h1{
-    position: revert;
-    color: #008;
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
-header{
-    height: 100px;
-    background-color: #F7941D;
-}
-
-div.navbar{
-    height: 25px;
-    background-color: #009;
-}
-
-main{
-    height: 00px;
-    background-color:rgb(34, 56, 40) ;
-}
-
-footer{
-    background: #E5801C;
-    width: 1409px;
-    position: absolute;
-    bottom:0;
-
-    padding: 2rem 0 1rem 0;
-    height:110px;
-}
-footer.div{
-    position: absolute;
-    right: 0;
+:root {
+    --gray: #333;
+    --graylight: #CECBCB;
+    --gray-text: #222;
+    --graylight-text: #a6a6a6;
+    --white-text: #fff;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 
-main.section {
-    font-size: 200px;
-    text-transform: uppercase;
-    letter-spacing: .25rem;
-}
-
-section {
-    width: 1345px;
-    height : 500px;
-    padding-left: 50px;
-    background-image: url(images/biblio.jpg);
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", "sans-serif";
+    color: #FFF;
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 737px;
+    background-image: url("images/biblio.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+}
+
+
+/* MENU */
+#menu a {
+    font-size: 1.8rem;
+
+}
+
+#menu .sousMenu a {
+    color: #007179;
+    line-height: 4rem;
+    font-size: 1.6rem;
+    font-weight: 300;
+    transition: all .5s ease-in-out;
+}
+
+#menu {
+    position: relative;
+}
+nav.li {
+
+}
+
+
+.sousMenu {
+    width: 18rem;
+    background-color: #fff;
+    border-radius: .3rem;
+    padding: 2.5rem 3rem;
+    position: absolute;
+    right: 0;
+    margin: 0;
+    display: none;
+}
+
+#menu .sousMenu a:hover {
+    color: #E5801C;
+    padding-left: .9rem;
+}
+
+#menu:hover .sousMenu {
+    display: block;
+}
+
+#menu i {
+    padding-right: .5rem;
+    transition: .2s;
+}
+
+#menu:hover .fas {
+    transform: rotate(-90deg);
+    padding-right: 0;
+    padding-bottom: .3rem;
+    padding-left: .3rem;
+}
+
+/* BANNER */
+
+#banner {
+
+    /*TEXTE*/
     color: #FFF;
     display: flex;
     flex-direction: column;
@@ -63,5 +103,49 @@ section {
     padding: 2rem;
 }
 
+#banner {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+}
+
+h1 {
+    font-size: 12rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* FOOTER */
+
+footer {
+    height: 284px;
+    width: 1425px;
+    padding-top: 100px;
+    left: 0;
+    padding: 0px 0 0rem 0;
+    background-color: #000;
+    text-align: center;
+    color: #FFF;
+}
+
+footer p {
+    padding-top: 25px;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+footer li a {
+    font-size: 2.5rem;
+    color: #FFF;
+    transition: color .2s;
+}
+
+footer a:hover {
+    color: #fff;
+}
 
 

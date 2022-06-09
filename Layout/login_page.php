@@ -12,8 +12,6 @@ if(isset($_POST["LoginButton"])){
         if(!empty($email)&& !empty($password)){
 
             $sql = "SELECT * FROM user 
-                    INNER JOIN userrole 
-                    ON User_id = userrole.UserID 
                     WHERE( user.Email = '" . $email . "' AND user.password = '" . $password . "')";
             $result = $connection->query($sql);
 
@@ -26,14 +24,16 @@ if(isset($_POST["LoginButton"])){
                 foreach ($result as $row){
                     $isAllowed = true;
                     session_start();
-                    $SESSION["role"]=$row["Roles"];
-                    $SESSION["username"]=$username;
+                    $SESSION["username"]=["pseudo"];
                     $SESSION["Approved"]=$row["Approved"];
                     $SESSION["LastName"]=["nom"];
                     $SESSION["FirstName"]=["prénom"];
 
                     $password = null;
                     $username = null;
+                    echo "connexion reussi";
+                    header("location:../Layout/creation.php");
+                    exit();
                 }
             }
             if (!$isAllowed){

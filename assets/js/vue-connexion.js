@@ -27,3 +27,28 @@ Vue.component('register', {
 var register = new Vue({
     el: "#register-form"
 })
+
+Vue.component('login', {
+    template: `
+        <div class="container">
+            <h1>Connexion</h1>
+            <p>Veuillez remplir ce formulaire pour vous connecter.</p>
+            <hr>
+
+            <label for="email"><b>E-mail</b></label>
+            <input type="text" placeholder="exemple@gmail.com" name="email" id="email" required>
+
+            <label for="psw"><b>Mot de Passe</b></label>
+            <input type="password" placeholder="MotDePasse" name="psw" id="psw" required>
+            <hr>
+
+            <button type="submit" class="registerbtn">Connexion</button>
+            <br>
+            <p>Vous n'avez pas de compte chez nous? <a href="../../Layout/register.php">Création de compte.</a>.</p>
+        </div>
+    `
+})
+
+var login = new Vue({
+    el: "#login-form"
+})

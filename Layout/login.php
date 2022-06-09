@@ -4,27 +4,17 @@
     <meta charset="utf-8" />
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="../assets/css/register.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script type="text/javascript" src="../assets/js/vue-connexion.js" async></script>
 </head>
 <body>
-<form action="../Layout/login_page.php">
-    <div class="container">
-        <h1>Connexion</h1>
-        <p>Veuillez remplir ce formulaire pour vous connecter.</p>
-        <hr>
-
-        <label for="email"><b>E-mail</b></label>
-        <input type="text" placeholder="exemple@gmail.com" name="email" id="email" required>
-
-        <label for="psw"><b>Mot de Passe</b></label>
-        <input type="password" placeholder="MotDePasse" name="psw" id="psw" required>
-        <hr>
-
-        <button type="submit" class="registerbtn">Connexion</button>
+    <div id="login-form">
+        <form action="../Layout/login_page.php" method="post">
+            <login></login>
+        </form>
     </div>
-    <br>
-    <div class="signin">
-        <p>Vous n'avez pas de compte chez nous? <a href="../Layout/register.php">Création de compte.</a>.</p>
-    </div>
-</form>
 </body>
 </html>

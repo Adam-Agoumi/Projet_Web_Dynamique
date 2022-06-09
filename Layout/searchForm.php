@@ -29,7 +29,7 @@
 
     if($_POST["submitbtn"]){
         //if($db_found){
-            $sql = "SELECT * FROM Book";
+            $sql = "SELECT * FROM [Book]";
             if($titre != ""){
                 $sql .= " WHERE Title LIKE '%$titre%'";
                 if($auteur != ""){

@@ -7,10 +7,11 @@
    header("Location: {$redirect_url}");
    exit;
 
-<?php
+
   // Vérifie qu'il provient d'un formulaire
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //identifiants mysql
+  if ($_SERVER["REQUEST_METHOD"] != "POST") {
+      return;
+  }//identifiants mysql
     $host = "localhost";
     $username = "root";
     $password = "";
@@ -42,5 +43,4 @@
     }else{
       print $mysqli->error;
     }
-  }
 ?>

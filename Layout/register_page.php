@@ -1,27 +1,25 @@
 <?php
-    // PHP Data Objects(PDO) Sample Code:
-    try {
-        $conn = new PDO("sqlsrv:server = tcp:webdynamiquegroupe3.database.windows.net,1433; Database = User", "Guillaume", "{RootRoot3}");
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        print("Connection reussie.");
-    }
-    catch (PDOException $e) {
-        print("Error connecting to SQL Server.");
-        die(print_r($e));
-    }
-
-    // SQL Server Extension Sample Code:
-    $connectionInfo = array("UID" => "Guillaume", "pwd" => "{RootRoot3}", "Database" => "User", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-    $serverName = "tcp:webdynamiquegroupe3.database.windows.net,1433";
-    $conn = sqlsrv_connect($serverName, $connectionInfo);
-
-
+    $connection = null;
+    require '../script/bdd_users_connect.php';
     //recuperer les donnees du form
-    $email = isset($_POST["email"])?$_POST["email"]:"";
-    $psw = isset($_POST["psw"])?$_POST["psw"]:"";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+    $psw = isset($_POST["psw"]) ? $_POST["psw"] : "";
+    $firstName = isset($_POST["firstName"]) ? $_POST["firstName"] : "";
+    $lastName = isset($_POST["lastName"]) ? $_POST["lastName"] : "";
+    $birthDate = isset($_POST["birthDate"]) ? $_POST["birthDate"] : "";
+    $username = isset($_POST["username"]) ? $_POST["username"] : "";
+    //psw-repeat
 
-    $sql = "INSERT INTO User(Username, FirstName, LastName, Birthdate, Email, Password, Approved)
-            VALUES('Coco', 'Colin', 'Joubert', '2001-01-01', '$email', '$psw', '0')";
 
+    $sql = "INSERT INTO User(User_id, Username, FirstName, LastName, Birthdate, Email, Password, Approved)
+            VALUES(null, '$username', '$firstName', '$lastName', '$birthDate', '$email', '$psw', '0')";
+
+    if($connection->query($sql) === true){
+        echo "Nouvel utilisateur enregistré";
+    }else{
+        echo "Error: " . $sql . "<br>";
+    }
+
+    $connection = null;
 
 ?>

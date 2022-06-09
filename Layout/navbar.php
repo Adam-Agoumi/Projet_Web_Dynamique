@@ -24,7 +24,7 @@
             <a class="nav-link nav-link-custom text-light" href="../Layout/page_d_acceuil.php">Acceuil</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link nav-link-custom text-light" href="../Layout/dashboard.php">Voirlivres</a>
+            <a class="nav-link nav-link-custom text-light" href="../Layout/dashboard.php">Voir livres</a>
         </li>
         <li class="nav-item">
             <a class="nav-link nav-link-custom text-light" href="../Layout/creation.php">Ajouter un livre</a>

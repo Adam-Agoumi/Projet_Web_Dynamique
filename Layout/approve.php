@@ -1,3 +1,6 @@
+<?php
+require ("navbar.php");
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,7 +18,7 @@
             require ("navbar.php");
             $connection = null;
             require '../script/bdd_livres_connect.php';
-            $sql = "SELECT * FROM Book WHERE approbation = 0";
+            $sql = "SELECT * FROM book WHERE approbation = '0'";
             $result = $connection->query($sql);
             if($result->rowCount() == 0){
                 echo "Il n'y a pas de livres en attente de validation";

@@ -15,37 +15,39 @@
         require ("navbar.php");
         $connection = null;
             require '../script/bdd_users_connect.php';
-            $sql = "SELECT User_id, Username, FirstName, LastName, Birthdate, Email FROM user WHERE approbation = 0";
+            $sql = "SELECT User_id, Username, FirstName, LastName, Birthdate, Email FROM user WHERE Approved = '0'";
             $result = $connection->query($sql);
             if($result->rowCount() == 0){
-                echo "Il n'y a pas de livres en attente de validation";
+                echo "Il n'y a pas d'utilisateurs en attente de validation";
             }else{
                 echo "<h1>Utilisateurs en attente de validation:</h1>\n";
 
-            echo "\n<table>\n<tr>\n" .
-                "\n\t<th>UID</th>" .
-                "\n\t<th>Username</th>" .
-                "\n\t<th>Prénom</th>" .
-                "\n\t<th>Nom</th>" .
-                "\n\t<th>Birthdate</th>" .
-                "\n\t<th>Email</th>";
+                echo "\n<table>\n<tr>\n" .
+                        "\n\t<th>UID</th>" .
+                        "\n\t<th>Username</th>" .
+                        "\n\t<th>Prénom</th>" .
+                        "\n\t<th>Nom</th>" .
+                        "\n\t<th>Birthdate</th>" .
+                        "\n\t<th>Email</th>";
 
-            while($row = $result->fetch(PDO::FETCH_ASSOC)){ //jusqu'à plus de row dans le result
-                echo "\n<tr>"; //on commence un row du tableau
+                while($row = $result->fetch(PDO::FETCH_ASSOC)){ //jusqu'à plus de row dans le result
+                    echo "\n<tr>"; //on commence un row du tableau
 
-                //on sort chacun des attributs comme table data
-                foreach ($row as $dataTitle) {
-                    echo "\n\t<td> $dataTitle</td>";
+                    //on sort chacun des attributs comme table data
+                    foreach ($row as $dataTitle) {
+                        echo "\n\t<td> $dataTitle</td>";
+                    }
+
+                    //on finit le row
+                    echo "\n</tr>";
                 }
-
-                //on finit le row
-                echo "\n</tr>";
+                //finir le tableau
+                echo "\n</table>\n";
             }
-            //finir le tableau
-            echo "\n</table>\n";
-        }
         ?>
-
+        <br>
+        <br>
+        <br>
         <div id="userIDForm">
             <form action="../Layout/approve_user.php" method="post">
                 <div class="container">

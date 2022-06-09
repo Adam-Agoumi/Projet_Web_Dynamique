@@ -1,4 +1,7 @@
 <?php
+require ("navbar.php");
+?>
+<?php
 $connection = null;
 require '../script/bdd_livres_connect.php';
 //recuperer les donnees du form

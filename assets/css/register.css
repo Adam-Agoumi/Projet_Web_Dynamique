@@ -51,3 +51,19 @@ a{
     text-align: center;
     padding: 16px;
 }
+
+table, th, td {
+    border: 2px solid #002D72;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}
+
+td {
+    height: 25px;
+}

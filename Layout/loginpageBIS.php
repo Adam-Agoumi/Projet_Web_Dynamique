@@ -1,4 +1,5 @@
 <?php
+require ("navbar.php");
 $result = $connection->query($sql);
 while ($rows = $result->fetch()){
     $Name = $rows['Name'];

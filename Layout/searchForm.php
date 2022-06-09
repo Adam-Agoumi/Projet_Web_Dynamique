@@ -6,7 +6,10 @@
     <title>Search Form</title>
 </head>
 <body>
+
 <?php
+require ("navbar.php");
+
     $database = "books";
     $servername ="localhost";
     $usernameDB = "root";

@@ -1,4 +1,6 @@
+
 <?php
+require ("navbar.php");
 
 $email = isset($_POST["email"]) ? $_POST["email"] : "";
 $password = isset($_POST["psw"]) ? $_POST["psw"] : "";

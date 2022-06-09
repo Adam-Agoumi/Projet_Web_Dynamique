@@ -1,10 +1,7 @@
 <?php
-session_start();
-if($_SESSION['isWebPageAllowed']==false){
-    header('Location:page_d_acceuil.php');
-}
 require ("navbar.php");
-
+?>
+<?php
 
     $bookTitle = isset($_POST["bookTitle"]) ? $_POST["bookTitle"] : "";
     $connection = null;
@@ -14,9 +11,9 @@ require ("navbar.php");
     if(isset($_POST["valider"])){
         if(session_status() == PHP_SESSION_NONE){
             if(!empty($bookTitle)){
-                $sql = "UPDATE book SET approbation=1 WHERE Title = $bookTitle";
+                $sql = "UPDATE book SET approbation=1 WHERE Title = '$bookTitle'";
                 $result = $connection->query($sql);
-                if($result === true){
+                if($result == true){
                     echo "Livre approuvé";
                 }else{
                     echo "Error:" . $sql . "<br>";

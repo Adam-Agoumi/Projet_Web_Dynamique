@@ -10,13 +10,20 @@ require ("navbar.php");
 
     require '../script/bdd_users_connect.php';
 
-    if(isset($_POST["valider"])){
+    //echo "1";
+
+    if(isset($_POST["Valider"])){
+        //echo "2";
         if(session_status() == PHP_SESSION_NONE){
+            //echo "3";
             if(!empty($userID)){
-                $sql = "UPDATE user SET approbation=1 WHERE User_id = $userID";
+                //echo "4";
+                $sql = "UPDATE user SET Approved=1 WHERE User_id = '$userID'";
                 $result = $connection->query($sql);
-                if($result === true){
+                if($result == true){
                     echo "Utilisateur approuvé";
+                    header("Location: ../Layout/approve_bis.php");
+                    exit();
                 }else{
                     echo "Error:" . $sql . "<br>";
                 }

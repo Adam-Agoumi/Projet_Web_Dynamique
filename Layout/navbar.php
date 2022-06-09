@@ -15,7 +15,7 @@
     <ul class="navbar-nav" >
         <a class="navbar-brand"><img src="../assets/img/logo.png" height=50 ></a>
         <li class="nav-item">
-            <a class="nav-link nav-link-custom text-light" href="../Layout/register.php" style="margin-left: 400px">Inscription</a>
+            <a class="nav-link nav-link-custom text-light" href="../Layout/register.php" style="margin-left: 250px">Inscription</a>
         </li>
         <li class="nav-item">
             <a class="nav-link nav-link-custom text-light" href="../Layout/index.php">Connexion</a>
@@ -37,6 +37,15 @@
         </li>
         <li class="nav-item">
             <a class="nav-link nav-link-custom text-light" href="../Layout/users.php">Supprimer un utilisateur</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-custom text-light" href="../Layout/supprimerLivre.php">Supprimer un livre</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-custom text-light" href="../Layout/approve.php">Approuver un livre</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-custom text-light" href="#">Approuver un utilisateur</a>
         </li>
 
     </ul>

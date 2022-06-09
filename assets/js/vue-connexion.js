@@ -2,9 +2,24 @@ Vue.component('register', {
     template: `
     
         <div class="container">
-            <h1>Creation de compte</h1>
-            <p>Veuillez remplir ce formulaire pour creer un compte.</p>
+            <h1>Création de compte</h1>
+            <p>Veuillez remplir ce formulaire pour créer un compte.</p>
             <hr>
+            
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Marko" name="username" id="username" required>
+            
+            <label for="firstName"><b>Prénom</b></label>
+            <input type="text" placeholder="Marc" name="firstName" id="firstName" required>
+            
+            <label for="lastName"><b>Nom</b></label>
+            <input type="text" placeholder="Dupont" name="lastName" id="lastName" required>
+            
+            <label for="birthDate"><b>Date de naissance</b></label>
+            <br>
+            <input type="date" name="birthDate" id="birthDate" required>
+            <br>
+            <br>
 
             <label for="email"><b>E-mail</b></label>
             <input type="text" placeholder="exemple@gmail.com" name="email" id="email" required>
@@ -42,7 +57,7 @@ Vue.component('login', {
             <input type="password" placeholder="MotDePasse" name="psw" id="psw" required>
             <hr>
 
-            <button name="LoginButton" type="submit" class="registerbtn">Connexion</button>
+            <button name ="LoginButton" type="submit" class="registerbtn">Connexion</button>
             <br>
             <p>Vous n'avez pas de compte chez nous? <a href="../../Layout/register.php">Création de compte.</a>.</p>
         </div>

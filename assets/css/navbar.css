@@ -1,41 +1,20 @@
 .navbar-custom {
     height: 50px;
     background-color: #007179 !important;
-    padding: 50px;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.navbar-brand {
-    padding-right: 200px;
-}
-
-.nav-link-custom {
-    color: white;
-}
-
-.nav-link-custom:hover {
+.nav-link-custom:hover{
     color: #F7941D !important;
     transition-property: all !important;
     transition-duration: 0.2s !important;
 }
 
-.inscription {
-    background-color: #002D72;
-    border-radius: 5px;
-}
-
-/*.btn-custom {
+.btn-custom{
     background-color: #F7941D !important;
 }
-
-.btn-custom:hover {
+.btn-custom:hover{
     background-color: white !important;
-    color: #F7941D !important;
+    color : #F7941D !important;
     transition-property: all;
     transition-duration: 0.2s;
-}*/
+}
